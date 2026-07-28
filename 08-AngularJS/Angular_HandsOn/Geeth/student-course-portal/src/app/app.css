@@ -1,0 +1,54 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f7ff 0%, #e8efff 100%);
+  color: #1f2937;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: #1d4ed8;
+  color: white;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.home {
+  padding: 2rem;
+}
+
+.home h2 {
+  margin-bottom: 0.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 140px;
+  font-weight: 600;
+}

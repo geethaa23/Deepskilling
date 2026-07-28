@@ -1,0 +1,37 @@
+<section class="course-list">
+  <div class="course-list-header">
+    <h1>Available Courses</h1>
+    <p>Shared course count: {{ (courses$ | async)?.length || 0 }}</p>
+    <button type="button" (click)="addSampleCourse()">Add Sample Course</button>
+    <p class="hint">This list and the home page share the same CourseService instance.</p>
+  </div>
+
+  <section class="search-panel">
+    <label for="course-search">Search courses</label>
+    <input id="course-search" type="text" [(ngModel)]="searchTerm" (input)="onSearchChange()" placeholder="Search by name or code" />
+  </section>
+
+  <div *ngIf="errorMessage$ | async as errorMessage" class="error-message">{{ errorMessage }}</div>
+  <div *ngIf="isLoading$ | async">Loading courses...</div>
+
+  <ng-container *ngIf="courses$ | async as courses">
+    <div *ngIf="courses.length > 0; else noCourses" class="courses-grid">
+      <app-course-card
+        *ngFor="let course of courses; trackBy: trackByCourseId"
+        [course]="course"
+        [appHighlight]="course.gradeStatus === 'passed' ? 'lightgreen' : course.gradeStatus === 'failed' ? 'lightcoral' : 'lightgrey'"
+        [isEnrolled]="(enrolledIds$ | async)?.includes(+course.id) ?? false"
+        (click)="navigateToCourse(course)"
+        (enrollRequested)="onEnroll($event)">
+      </app-course-card>
+    </div>
+  </ng-container>
+
+  <ng-template #noCourses>
+    <p>No courses available.</p>
+  </ng-template>
+
+  <div class="selected-course" *ngIf="selectedCourseId !== null">
+    <p>Selected course ID: {{ selectedCourseId }}</p>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+:host .header {
+	background: #123656;
+	color: #fff;
+	padding: 0.75rem 1rem;
+}
+
+:host .header h1 {
+	font-size: 1.125rem;
+	margin: 0;
+	font-weight: 700;
+}
+
+:host .header nav {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+:host .header nav a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 0.35rem 0.5rem;
+}
+
+:host .header nav a:hover {
+	background: rgba(255,255,255,0.06);
+	border-radius: 6px;
+}
+

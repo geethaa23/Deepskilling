@@ -1,0 +1,81 @@
+.home {
+	padding: 3rem 1rem;
+}
+
+.home .container {
+	width: 900px;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.home h1 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	font-family: Georgia, 'Times New Roman', serif;
+}
+
+.home .lead {
+	color: #374151;
+	margin-bottom: 1.5rem;
+}
+
+.stats {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.stat-card {
+	background: #e6eef8;
+	color: #0f172a;
+	padding: 0.8rem 1rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(16,24,40,0.06);
+	min-width: 140px;
+	font-weight: 600;
+}
+
+button {
+  margin-top: 1.5rem;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  margin-top: 0.75rem;
+  color: #0f5132;
+}
+
+.search-section {
+  margin-top: 2rem;
+}
+
+.search-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-section input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+.hint {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #475569;
+}

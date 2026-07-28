@@ -1,0 +1,17 @@
+<section class="profile-page">
+  <div class="profile-card">
+    <h1>Student Profile</h1>
+    <p><strong>Name:</strong> {{ studentName }}</p>
+    <p><strong>Major:</strong> {{ major }}</p>
+    <p><strong>Year:</strong> {{ year }}</p>
+    <p>Welcome to your student dashboard. Use the navigation above to browse courses and return to your home page.</p>
+
+    <div class="enrolled-section">
+      <h2>Enrolled Courses</h2>
+      <ul>
+        <li *ngFor="let course of enrolledCourses">{{ course.name }} ({{ course.code }})</li>
+      </ul>
+      <p *ngIf="enrolledCourses.length === 0">No enrolled courses yet.</p>
+    </div>
+  </div>
+</section>

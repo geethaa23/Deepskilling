@@ -1,0 +1,30 @@
+<section class="home">
+  <div class="container">
+    <h1># {{ portalName }}</h1>
+    <p class="lead">Explore courses, track your learning, and view your academic progress.</p>
+
+    <div class="stats">
+      <div class="stat-card"><strong>Shared Course Count:</strong> {{ courseCount }}</div>
+      <div class="stat-card"><strong>Enrolled:</strong> {{ enrolledCount }}</div>
+      <div class="stat-card"><strong>GPA:</strong> 3.8</div>
+    </div>
+
+    <p class="hint">Adding a course here or in the course list updates the shared count because both components use the same root service.</p>
+
+    <app-course-summary-widget></app-course-summary-widget>
+    <app-notification></app-notification>
+
+    <button [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+    <p class="message">{{ message }}</p>
+
+    <section class="search-section">
+      <label for="search">Search courses</label>
+      <input id="search" type="text" [(ngModel)]="searchTerm" placeholder="Enter a course name" />
+      <p>Searching for: {{ searchTerm }}</p>
+    </section>
+
+    <p class="hint"><!-- [property] is one-way binding from component to DOM, while [(ngModel)] is two-way binding between DOM and component. -->
+      <strong>Note:</strong> [property] is one-way (component → DOM), [(ngModel)] is two-way (DOM ↔ component).
+    </p>
+  </div>
+</section>

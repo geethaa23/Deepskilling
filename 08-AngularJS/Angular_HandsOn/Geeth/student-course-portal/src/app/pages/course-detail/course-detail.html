@@ -1,0 +1,19 @@
+<section class="course-detail">
+  <div class="container">
+    <h1>Course Detail</h1>
+
+    <ng-container *ngIf="course; else notFound">
+      <div class="detail-card">
+        <h2>{{ course.name }}</h2>
+        <p><strong>ID:</strong> {{ course.id }}</p>
+        <p><strong>Code:</strong> {{ course.code }}</p>
+        <p><strong>Credits:</strong> {{ course.credits }}</p>
+        <p><strong>Status:</strong> {{ course.gradeStatus | titlecase }}</p>
+      </div>
+    </ng-container>
+
+    <ng-template #notFound>
+      <p>Course not found for ID {{ courseId }}.</p>
+    </ng-template>
+  </div>
+</section>

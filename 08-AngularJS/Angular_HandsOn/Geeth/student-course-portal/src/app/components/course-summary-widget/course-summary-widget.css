@@ -1,0 +1,17 @@
+.summary-widget {
+  margin-bottom: 1.5rem;
+}
+
+.summary-widget p {
+  font-weight: 700;
+}
+
+.summary-widget button {
+  margin-top: 0.65rem;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}

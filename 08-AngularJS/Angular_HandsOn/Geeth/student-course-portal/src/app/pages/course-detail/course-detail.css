@@ -1,0 +1,16 @@
+.course-detail {
+  padding: 2rem 1rem;
+}
+
+.detail-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.detail-card h2 {
+  margin-top: 0;
+}

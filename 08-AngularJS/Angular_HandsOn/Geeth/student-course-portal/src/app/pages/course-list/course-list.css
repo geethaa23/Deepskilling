@@ -1,0 +1,20 @@
+.course-list {
+  padding: 2.5rem 1rem;
+}
+
+.course-list-header h1 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.selected-course {
+  margin-top: 1.75rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}

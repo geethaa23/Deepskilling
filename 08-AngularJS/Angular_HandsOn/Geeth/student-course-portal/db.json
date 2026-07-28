@@ -1,0 +1,33 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Angular Fundamentals",
+      "code": "ANG101",
+      "credits": 3,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": "2",
+      "name": "Reactive Programming",
+      "code": "RXJS202",
+      "credits": 4,
+      "gradeStatus": "pending"
+    },
+    {
+      "name": "Sample Course 1",
+      "code": "SMP1",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "id": "5IXENFQy0y0"
+    },
+    {
+      "name": "Sample Course 4",
+      "code": "SMP4",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "id": "4kWCIFKghXM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
